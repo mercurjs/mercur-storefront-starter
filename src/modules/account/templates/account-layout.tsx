@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
 
-import UnderlineLink from "@modules/common/components/interactive-link"
+import UnderlineLink from "@modules/common/components/interactive-link";
 
-import AccountNav from "../components/account-nav"
-import { Customer } from "@medusajs/medusa"
+import AccountNav from "../components/account-nav";
+import { Customer } from "@medusajs/medusa";
 
 interface AccountLayoutProps {
-  customer: Omit<Customer, "password_hash"> | null
-  children: React.ReactNode
+  customer: Omit<Customer, "password_hash"> | null;
+  children: React.ReactNode;
 }
 
 const AccountLayout: React.FC<AccountLayoutProps> = ({
@@ -30,14 +30,12 @@ const AccountLayout: React.FC<AccountLayoutProps> = ({
             </span>
           </div>
           <div>
-            <UnderlineLink href="/customer-service">
-              Customer Service
-            </UnderlineLink>
+            <a href="mailto:hello@mercurjs.com">Customer Service</a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AccountLayout
+export default AccountLayout;
