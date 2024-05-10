@@ -1,9 +1,12 @@
-import React from "react"
-import { CreditCard } from "@medusajs/icons"
+import React from "react";
+import { CreditCard } from "@medusajs/icons";
 
-import Ideal from "@modules/common/icons/ideal"
-import Bancontact from "@modules/common/icons/bancontact"
-import PayPal from "@modules/common/icons/paypal"
+import Ideal from "@modules/common/icons/ideal";
+import Bancontact from "@modules/common/icons/bancontact";
+import PayPal from "@modules/common/icons/paypal";
+
+export const VENDOR_PANEL_URL =
+  process.env.NEXT_PUBLIC_VENDOR_PANEL ?? "http://localhost:7001";
 
 /* Map of payment provider_id to their title and icon. Add in any payment providers you want to use. */
 export const paymentInfoMap: Record<
@@ -31,7 +34,7 @@ export const paymentInfoMap: Record<
     icon: <CreditCard />,
   },
   // Add more payment providers here
-}
+};
 
 // Add currencies that don't need to be divided by 100
 export const noDivisionCurrencies = [
@@ -54,4 +57,4 @@ export const noDivisionCurrencies = [
   "xag",
   "xdr",
   "xau",
-]
+];
